@@ -3,7 +3,7 @@ import { Food } from "./classes/Food";
 
 
 let snake:Snake = new Snake([0, 0], "right");
-let food:Food = new Food();
+let food:Food = new Food([Math.ceil(Math.random()*59), Math.ceil(Math.random()*59)]);
 snake.setFood(food)
 
 let intval = setInterval(function(){

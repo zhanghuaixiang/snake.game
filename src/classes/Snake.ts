@@ -111,8 +111,16 @@ export default class Snake extends Pool{
         this.head = this.food;
         // 将吃掉的食物算进身体内
         this.body.push(this.food);
-        // 产生个新食物
-        this.food = new Food();
+        
+        for (let index = 0; index>=0; index++) {
+            let newPos = [Math.ceil(Math.random()*59), Math.ceil(Math.random()*59)];
+            // 新食物的坐标没在蛇身上的时候，再产生新食物，否则重新生成食物坐标
+            if(!this.ifCoveredSelfBody(newPos)){
+                // 产生个新食物 
+                this.food = new Food(newPos);
+                break;
+            }
+        }
     }
     // 死
     public die () {
@@ -130,5 +138,8 @@ export default class Snake extends Pool{
             }
         }
         return flag;
+    }
+    private ifFoodInItsBody () {
+
     }
 }
