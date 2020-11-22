@@ -11,11 +11,11 @@ module.exports = {
         filename: "main.js"
     },
     // 自动编译热更新
-    // devServer: {
-    //     contentBase: "/dist",
-    //     // 自动在浏览器打开服务
-    //     open: true
-    // },
+    devServer: {
+        contentBase: "/dist",
+        // 自动在浏览器打开服务
+        open: true
+    },
     resolve: {
         extensions: [".ts", ".js", ".json"]
     },

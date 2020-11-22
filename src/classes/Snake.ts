@@ -82,7 +82,7 @@ export default class Snake extends Pool{
             "down": [headPos[0], headPos[1]+1]
         }
         newPos = newPosDict[this.direction];
-        // 判断是否已出界或吃到了自己
+        // 判断是否已出界或吃到了自己 
         if(this.ifOutside(newPos) || this.ifCoveredSelfBody(newPos)){
             this.die();
             return;
