@@ -28,10 +28,6 @@ export class Square extends Pool{
         this.dom.style.top = this.y + "px";
         this.appendSquares(this.dom);
     }
-    // 获取生成的dom
-    public getElem():HTMLElement{
-        return this.dom;
-    }
 
     // 获取位置，用来避免生成食物时，生成在蛇身上
     public getPosition():Array<number> {

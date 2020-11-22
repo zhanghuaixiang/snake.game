@@ -139,7 +139,4 @@ export default class Snake extends Pool{
         }
         return flag;
     }
-    private ifFoodInItsBody () {
-
-    }
 }
