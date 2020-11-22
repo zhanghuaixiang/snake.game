@@ -1,6 +1,7 @@
 import Snake from "./classes/Snake";
 import { Food } from "./classes/Food";
 
+
 let snake:Snake = new Snake([0, 0], "right");
 let food:Food = new Food();
 snake.setFood(food)
@@ -18,7 +19,6 @@ document.onkeydown = function(e){
     }
     snake.setDirection(codeMap[e.keyCode])
 }
-
 window.onerror = function(message) :void{
     snake = null;
     clearInterval(intval)

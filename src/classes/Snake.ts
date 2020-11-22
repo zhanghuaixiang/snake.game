@@ -117,9 +117,7 @@ export default class Snake extends Pool{
     // 死
     public die () {
         alert("game over")
-        setTimeout(function(){
-            throw new Error("game over");
-        })
+        window.onerror("game over");
     }
     // 新位置是否在蛇身上
     public ifCoveredSelfBody(pos:Array<number>):Boolean {
