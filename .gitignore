@@ -1,1 +1,4 @@
 node_modules
+snake.game-win32-x64
+dist
+yarn-error.log
