@@ -14,24 +14,29 @@ module.exports = {
     devServer: {
         contentBase: "/dist",
         // 自动在浏览器打开服务
-        open: true
+        open: false,
+        port: 1088,
+        // 放开ip访问
+        host: "0.0.0.0"
     },
     resolve: {
         extensions: [".ts", ".js", ".json"]
     },
     mode: "development",
     module: {
-        rules:[{
-            test: /\.ts$/,
-            use: ["ts-loader"],
-            // 排除node_modules中的ts文件
-            exclude: /node_modules/
-        }]
+        rules: [
+            {
+                test: /\.ts$/,
+                use: ["ts-loader"],
+                // 排除node_modules中的ts文件
+                exclude: /node_modules/
+            }
+        ]
     },
     plugins: [
         // 自动生成》html文件
-        new HtmlWebpackPlugin ({
+        new HtmlWebpackPlugin({
             template: "./src/index.html"
         })
     ]
-}
+};
